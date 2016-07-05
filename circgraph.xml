@@ -61,7 +61,7 @@
 
     circos -conf circos/conf/circos.conf &&
     mv circos/circos.png $output_png &&
-    mv circos/circos.svg $output_svg
+    mv circos/circos.svg $output_svg;
 ]]></command>
   <configfiles>
     <expand macro="configfile_circos_conf" />
@@ -101,7 +101,7 @@
             <param type="boolean" label="Parallel" name="parallel" truevalue="yes" falsevalue="no" help="When set to yes/true, labels will be perpendicular to the tangent of the circle at the location of the label. Otherwise, they will be parallel with the tangent of the circle"/>
         </section>
         <!-- TODO: multiple band files? -->
-        <param type="data" title="Cytogenetic Bands" format="bed6,bed12,gff3" name="bands"
+        <param type="data" label="Cytogenetic Bands" format="bed6,bed12,gff3" name="bands"
             help="If defined, will display cytogenetic bands as part of the karyotype configuration" optional="true"/>
     </section>
 
@@ -198,8 +198,8 @@
                     <param type="data" name="data_source" format="bed6,bed12,gff3" label="Tile Data Source"
                         help="If your tile source features have scores in them, they will be used in colouration"/>
                     <section name="format_specific" title="Plot Format Specific Options">
-                        <expand macro="brewer_scale" label="Fill Color" name="fill_color"/>
-                        <expand macro="circos_color" label="Stroke Color" name="color" value="#000000"/>
+                        <expand macro="circos_color" label="Fill Color" name="color" value="#aaffaa"/>
+                        <expand macro="circos_color" label="Stroke Color" name="stroke_color" value="#000000"/>
                         <param type="integer" value="0" label="Stroke Thickness" name="stroke_thickness" />
                         <param type="integer" value="15" label="Layers" name="layers" />
                         <param type="float" value="15" label="Thickness" name="thickness" help="In pixels"/>

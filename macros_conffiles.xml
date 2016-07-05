@@ -119,8 +119,8 @@ show_tick_labels    = yes
     stroke_color         = $circosColor($data.plot_format.format_specific.stroke_color)
     stroke_thickness     = ${data.plot_format.format_specific.stroke_thickness}
 #else if str($plot_type) == 'tile':
-    color                = ${data.plot_format.format_specific.color}
-    stroke_color         = $circosColor($data.plot_format.format_specific.color)
+    color                = $circosColor($data.plot_format.format_specific.color)
+    stroke_color         = $circosColor($data.plot_format.format_specific.stroke_color)
     stroke_thickness     = ${data.plot_format.format_specific.stroke_thickness}
     layers               = ${data.plot_format.format_specific.layers}
     thickness            = ${data.plot_format.format_specific.thickness}
@@ -298,7 +298,7 @@ cp "$output_svg" test-data/my-test-case/output.svg;
     #else if str($data_group.plot_format.plot_format_select) == 'line':
         <param name="sec_tdd|data_${idx}|plot_format|data_source" value="my-test-case/${idx}.${data.plot_format.data_source.ext}" />
         <param name="sec_tdd|data_${idx}|plot_format|format_specific|color" value="${data_group.plot_format.format_specific.color}" />
-        <param name="sec_tdd|data_${idx}|plot_format|format_specific|stroke" value="${data_group.plot_format.format_specific.stroke}" />
+        <param name="sec_tdd|data_${idx}|plot_format|format_specific|thickness" value="${data_group.plot_format.format_specific.thickness}" />
     #else if str($data_group.plot_format.plot_format_select) == 'scatter':
         <param name="sec_tdd|data_${idx}|plot_format|data_source" value="my-test-case/${idx}.${data.plot_format.data_source.ext}" />
         <param name="sec_tdd|data_${idx}|plot_format|format_specific|glyph" value="${data_group.plot_format.format_specific.glyph}" />
@@ -310,8 +310,8 @@ cp "$output_svg" test-data/my-test-case/output.svg;
         <param name="sec_tdd|data_${idx}|plot_format|format_specific|stroke_thickness" value="${data_group.plot_format.format_specific.stroke_thickness}" />
     #else if str($data_group.plot_format.plot_format_select) == 'tile':
         <param name="sec_tdd|data_${idx}|plot_format|data_source" value="my-test-case/${idx}.${data.plot_format.data_source.ext}" />
-        <param name="sec_tdd|data_${idx}|plot_format|format_specific|fill_color" value="${data_group.plot_format.format_specific.fill_color}" />
-        <param name="sec_tdd|data_${idx}|plot_format|format_specific|color" value="${data_group.plot_format.format_specific.color}" />
+        <param name="sec_tdd|data_${idx}|plot_format|format_specific|color"        value="${data_group.plot_format.format_specific.color}" />
+        <param name="sec_tdd|data_${idx}|plot_format|format_specific|stroke_color" value="${data_group.plot_format.format_specific.stroke_color}" />
         <param name="sec_tdd|data_${idx}|plot_format|format_specific|stroke_thickness" value="${data_group.plot_format.format_specific.stroke_thickness}" />
         <param name="sec_tdd|data_${idx}|plot_format|format_specific|layers" value="${data_group.plot_format.format_specific.layers}" />
         <param name="sec_tdd|data_${idx}|plot_format|format_specific|thickness" value="${data_group.plot_format.format_specific.thickness}" />
