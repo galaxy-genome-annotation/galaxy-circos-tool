@@ -1,3 +1,10 @@
+DEPRECATED
+==========
+
+This repository has been deprecated, all code is part of `tools-iuc <https://github.com/galaxyproject/tools-iuc/>`__ now.
+
+
+
 Galaxy Circos Tool
 ==================
 
